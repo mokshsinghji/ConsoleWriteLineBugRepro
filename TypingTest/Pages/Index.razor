@@ -1,6 +1,18 @@
 ﻿@page "/"
-@inject IJSRuntime js
+@inject IJSRuntime JSRuntime
 
 <h1>The typing test!</h1>
 
-<textarea @oninput="OnTextChange" />
+
+<div class="stats-container">
+    <span>
+        <span class="wpm"><span class="wpm__number">@Wpm</span> wpm</span> |
+        <span class="cpm"><span class="cpm__number">@Cpm</span> cpm</span>
+    </span>
+    <span class="time">
+        <span class="minutes">@TimePassed.Minutes.ToString().PadLeft(2, '0')</span>:<span class="seconds">@TimePassed.Seconds.ToString().PadLeft(2, '0')</span>
+    </span>
+</div>
+
+
+<textarea @bind="TextAreaContent" @bind:event="oninput"/>

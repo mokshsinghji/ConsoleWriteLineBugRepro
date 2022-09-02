@@ -1,4 +1,21 @@
-﻿h1 {
+﻿html, body {
+    height: 100vh;
+}
+
+h1 {
     text-align: center;
     font-family: 'Segoe UI Variable Small', Tahoma, Geneva, Verdana, sans-serif
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 100%;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
